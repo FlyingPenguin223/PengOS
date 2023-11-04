@@ -1,0 +1,121 @@
+
+- NASM Map file ---------------------------------------------------------------
+
+Source file:  boot+kernel.asm
+Output file:  ./builds/full.bin
+
+-- Program origin -------------------------------------------------------------
+
+00007C00
+
+-- Sections (summary) ---------------------------------------------------------
+
+Vstart            Start             Stop              Length    Class     Name
+            7C00              7C00              AB12  00002F12  progbits  .text
+
+-- Sections (detailed) --------------------------------------------------------
+
+---- Section .text ------------------------------------------------------------
+
+class:     progbits
+length:                2F12
+start:                 7C00
+align:     not defined
+follows:   not defined
+vstart:                7C00
+valign:    not defined
+vfollows:  not defined
+
+-- Symbols --------------------------------------------------------------------
+
+---- Section .text ------------------------------------------------------------
+
+Real              Virtual           Name
+            7C00              7C00  VERY_START
+            7C16              7C16  disk_load
+            7C2D              7C2D  disk_error
+            7C35              7C35  sectors_error
+            7C37              7C37  disk_loop
+            7C39              7C39  load_kernel
+            7E00              7E00  KERNEL_START
+            7E3B              7E3B  WELCOMESTR
+            7E4D              7E4D  WELCOMESTRLEN
+            7E4F              7E4F  WELCOMESTR2
+            7E6B              7E6B  WELCOMESTR2LEN
+            7E6D              7E6D  PRINT
+            7E75              7E75  PRINTLOOP
+            7E85              7E85  PRINTNEWLINE
+            7E99              7E99  PRINTEND
+            7E9B              7E9B  MOVECURS
+            7EA7              7EA7  GETINPUT
+            7EB5              7EB5  GETINPUTLOOP
+            7ED5              7ED5  GETINPUTEND
+            7EDA              7EDA  NEWLINE
+            7EEC              7EEC  CMPSTR
+            7EF0              7EF0  CMPLOOP
+            7F07              7F07  CMPRELOOP
+            7F15              7F15  CMPEQUAL
+            7F1A              7F1A  CLEARSCREEN
+            7F24              7F24  ENV
+            7F26              7F26  BINFOLDER
+            7F4D              7F4D  BINTABLE1
+            7F63              7F63  BINTABLE2
+            7F79              7F79  BINTABLE3
+            7F8F              7F8F  BINTABLE4
+            7FA5              7FA5  BINTABLE5
+            7FBB              7FBB  BINTABLE6
+            7FD1              7FD1  SHELLBIN
+            7FD3              7FD3  SHELL
+            7FD9              7FD9  SHELLTEXT
+            7FDC              7FDC  SHELLTEXTLEN
+            7FDE              7FDE  SHELLCOMMAND
+            7FFE              7FFE  SHELLARGS
+            803E              803E  SHELLNOTFOUNDSTR
+            8052              8052  SHELLNOTFOUNDSTRLEN
+            8054              8054  SHELLOOP
+            807A              807A  SHELLARGSCHECK
+            8099              8099  SHELLARGSWRITE
+            80A5              80A5  SHELLARGSLOOP
+            80BA              80BA  SHELLNOARGS
+            80C2              80C2  SHELLRUNCOMMAND
+            80D9              80D9  SHELLCHECKLOOP
+            80F2              80F2  SHELLMATCH
+            8109              8109  SHELLNOTFOUND
+            8118              8118  LSBIN
+            811D              811D  LSSTR
+            8121              8121  LSSTRLEN
+            8123              8123  LSSTR2
+            812C              812C  LSSTR2LEN
+            812E              812E  LSSTART
+            8160              8160  LSLOOP
+            8179              8179  LSEND
+            817B              817B  CDBIN
+            8180              8180  CDNOTFOUNDSTR
+            818C              818C  CDNOTFOUNDSTRLEN
+            818E              818E  CDSTART
+            819D              819D  CDLOOP
+            81B5              81B5  CDMATCH
+            81C9              81C9  CDNOTFOUND
+            81D5              81D5  CDEND
+            81D7              81D7  ECHOBIN
+            81D9              81D9  ECHO
+            81EB              81EB  CATBIN
+            81F0              81F0  CATNOTFOUNDSTR
+            8201              8201  CATNOTFOUNDSTRLEN
+            8203              8203  CATSTART
+            8212              8212  CATLOOP
+            822A              822A  CATMATCH
+            8243              8243  CATNOTFOUND
+            824C              824C  CATEND
+            8251              8251  TOUCHBIN
+            8262              8262  TOUCHGETFILETABLELOOP
+            8274              8274  TOUCHGOTFILETABLE
+            8296              8296  TOUCHWRITENAMELOOP
+            82A8              82A8  TOUCHWRITENAMEEND
+            82C1              82C1  CURDIR
+            82C3              82C3  FREESPACE
+            82C5              82C5  STDIN
+            83C5              83C5  FILES
+            83EC              83EC  ROOTTABLE1
+            8402              8402  FREESPACESTART
+

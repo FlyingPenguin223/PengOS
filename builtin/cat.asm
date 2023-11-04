@@ -32,7 +32,7 @@ pop bx
 je CATNOTFOUND
 
 add bx,16
-mov bx,[bx]
+mov bx,[bx] ;copies the pointer in the filetable to bx
 mov ax,[bx]
 add bx,2
 call PRINT

@@ -1,5 +1,6 @@
 [bits 16]
 [org 0x7c00]
+[map all ./builds/map.map]
 VERY_START:
 
 mov ax,0
@@ -169,7 +170,6 @@ CURDIR: dw word FILES ;start at root dir
 
 FREESPACE: dw word FREESPACESTART ;where to write new files to
 
-STDOUT: times 256 db 0 ;first byte is length
 STDIN: times 256 db 0 ;same as above
 
 FILES: db 2

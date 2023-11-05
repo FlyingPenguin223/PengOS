@@ -25,6 +25,7 @@ mov ah,0x02
 int 0x10
 popa
 inc cx
+inc bx
 jmp PRINTLOOP
 
 PRINTEND:

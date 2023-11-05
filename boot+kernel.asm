@@ -22,7 +22,7 @@ jmp $
 
 load_kernel:
 mov bx, KERNEL_START ; bx -> destination
-mov dh, 7             ; dh -> num sectors
+mov dh, 8             ; dh -> num sectors
 call disk_load
 ret
 
@@ -90,7 +90,7 @@ ret
 
 ENV: db word BINFOLDER
 
-BINFOLDER: db 7
+BINFOLDER: db 8
 db 3,'bin'
 times 16-4 db 0
 
@@ -140,6 +140,13 @@ db 0,1
 db 5,'touch'
 times 16-6 db 0
 dw word TOUCHBIN
+dw word BINTABLE7
+
+BINTABLE7:
+db 0,1
+db 2,'ed'
+times 16-3 db 0
+dw word EDBIN
 dw 0x0000
 
 SHELLBIN:
@@ -163,14 +170,18 @@ dw TOUCHBIN-$
 %include "./builtin/cat.asm"
 
 TOUCHBIN:
-dw CURDIR-$
+dw EDBIN-$
 %include "./builtin/touch.asm"
+
+EDBIN:
+dw CURDIR-$
+%include "./builtin/ed.asm"
 
 CURDIR: dw word FILES ;start at root dir
 
 FREESPACE: dw word FREESPACESTART ;where to write new files to
 
-STDIN: times 256 db 0 ;same as above
+STDIN: times 256 db 0
 
 FILES: db 2
 db 4,'root'

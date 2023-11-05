@@ -11,14 +11,14 @@ Output file:  ./builds/full.bin
 -- Sections (summary) ---------------------------------------------------------
 
 Vstart            Start             Stop              Length    Class     Name
-            7C00              7C00              AB12  00002F12  progbits  .text
+            7C00              7C00              AD98  00003198  progbits  .text
 
 -- Sections (detailed) --------------------------------------------------------
 
 ---- Section .text ------------------------------------------------------------
 
 class:     progbits
-length:                2F12
+length:                3198
 start:                 7C00
 align:     not defined
 follows:   not defined
@@ -45,77 +45,107 @@ Real              Virtual           Name
             7E6D              7E6D  PRINT
             7E75              7E75  PRINTLOOP
             7E85              7E85  PRINTNEWLINE
-            7E99              7E99  PRINTEND
-            7E9B              7E9B  MOVECURS
-            7EA7              7EA7  GETINPUT
-            7EB5              7EB5  GETINPUTLOOP
-            7ED5              7ED5  GETINPUTEND
-            7EDA              7EDA  NEWLINE
-            7EEC              7EEC  CMPSTR
-            7EF0              7EF0  CMPLOOP
-            7F07              7F07  CMPRELOOP
-            7F15              7F15  CMPEQUAL
-            7F1A              7F1A  CLEARSCREEN
-            7F24              7F24  ENV
-            7F26              7F26  BINFOLDER
-            7F4D              7F4D  BINTABLE1
-            7F63              7F63  BINTABLE2
-            7F79              7F79  BINTABLE3
-            7F8F              7F8F  BINTABLE4
-            7FA5              7FA5  BINTABLE5
-            7FBB              7FBB  BINTABLE6
-            7FD1              7FD1  SHELLBIN
-            7FD3              7FD3  SHELL
-            7FD9              7FD9  SHELLTEXT
-            7FDC              7FDC  SHELLTEXTLEN
-            7FDE              7FDE  SHELLCOMMAND
-            7FFE              7FFE  SHELLARGS
-            803E              803E  SHELLNOTFOUNDSTR
-            8052              8052  SHELLNOTFOUNDSTRLEN
-            8054              8054  SHELLOOP
-            807A              807A  SHELLARGSCHECK
-            8099              8099  SHELLARGSWRITE
-            80A5              80A5  SHELLARGSLOOP
-            80BA              80BA  SHELLNOARGS
-            80C2              80C2  SHELLRUNCOMMAND
-            80D9              80D9  SHELLCHECKLOOP
-            80F2              80F2  SHELLMATCH
-            8109              8109  SHELLNOTFOUND
-            8118              8118  LSBIN
-            811D              811D  LSSTR
-            8121              8121  LSSTRLEN
-            8123              8123  LSSTR2
-            812C              812C  LSSTR2LEN
-            812E              812E  LSSTART
-            8160              8160  LSLOOP
-            8179              8179  LSEND
-            817B              817B  CDBIN
-            8180              8180  CDNOTFOUNDSTR
-            818C              818C  CDNOTFOUNDSTRLEN
-            818E              818E  CDSTART
-            819D              819D  CDLOOP
-            81B5              81B5  CDMATCH
-            81C9              81C9  CDNOTFOUND
-            81D5              81D5  CDEND
-            81D7              81D7  ECHOBIN
-            81D9              81D9  ECHO
-            81EB              81EB  CATBIN
-            81F0              81F0  CATNOTFOUNDSTR
-            8201              8201  CATNOTFOUNDSTRLEN
-            8203              8203  CATSTART
-            8212              8212  CATLOOP
-            822A              822A  CATMATCH
-            8243              8243  CATNOTFOUND
-            824C              824C  CATEND
-            8251              8251  TOUCHBIN
-            8262              8262  TOUCHGETFILETABLELOOP
-            8274              8274  TOUCHGOTFILETABLE
-            8296              8296  TOUCHWRITENAMELOOP
-            82A8              82A8  TOUCHWRITENAMEEND
-            82C1              82C1  CURDIR
-            82C3              82C3  FREESPACE
-            82C5              82C5  STDIN
-            83C5              83C5  FILES
-            83EC              83EC  ROOTTABLE1
-            8402              8402  FREESPACESTART
+            7E9A              7E9A  PRINTEND
+            7E9C              7E9C  MOVECURS
+            7EA8              7EA8  GETINPUT
+            7EB6              7EB6  GETINPUTLOOP
+            7ED6              7ED6  GETINPUTEND
+            7EDB              7EDB  NEWLINE
+            7EED              7EED  CMPSTR
+            7EF1              7EF1  CMPLOOP
+            7F08              7F08  CMPRELOOP
+            7F16              7F16  CMPEQUAL
+            7F1B              7F1B  CLEARSCREEN
+            7F25              7F25  ENV
+            7F27              7F27  BINFOLDER
+            7F4E              7F4E  BINTABLE1
+            7F64              7F64  BINTABLE2
+            7F7A              7F7A  BINTABLE3
+            7F90              7F90  BINTABLE4
+            7FA6              7FA6  BINTABLE5
+            7FBC              7FBC  BINTABLE6
+            7FD2              7FD2  BINTABLE7
+            7FE8              7FE8  SHELLBIN
+            7FEA              7FEA  SHELL
+            7FF0              7FF0  SHELLTEXT
+            7FF3              7FF3  SHELLTEXTLEN
+            7FF5              7FF5  SHELLCOMMAND
+            8015              8015  SHELLARGS
+            8055              8055  SHELLNOTFOUNDSTR
+            8069              8069  SHELLNOTFOUNDSTRLEN
+            806B              806B  SHELLOOP
+            8091              8091  SHELLARGSCHECK
+            80B0              80B0  SHELLARGSWRITE
+            80BC              80BC  SHELLARGSLOOP
+            80D1              80D1  SHELLNOARGS
+            80D9              80D9  SHELLRUNCOMMAND
+            80F0              80F0  SHELLCHECKLOOP
+            8109              8109  SHELLMATCH
+            8120              8120  SHELLNOTFOUND
+            812F              812F  LSBIN
+            8134              8134  LSSTR
+            8138              8138  LSSTRLEN
+            813A              813A  LSSTR2
+            8143              8143  LSSTR2LEN
+            8145              8145  LSSTART
+            8177              8177  LSLOOP
+            8190              8190  LSEND
+            8192              8192  CDBIN
+            8197              8197  CDNOTFOUNDSTR
+            81A3              81A3  CDNOTFOUNDSTRLEN
+            81A5              81A5  CDSTART
+            81B4              81B4  CDLOOP
+            81CC              81CC  CDMATCH
+            81E0              81E0  CDNOTFOUND
+            81EC              81EC  CDEND
+            81EE              81EE  ECHOBIN
+            81F0              81F0  ECHO
+            8202              8202  CATBIN
+            8207              8207  CATNOTFOUNDSTR
+            8218              8218  CATNOTFOUNDSTRLEN
+            821A              821A  CATSTART
+            8229              8229  CATLOOP
+            8241              8241  CATMATCH
+            825A              825A  CATNOTFOUND
+            8263              8263  CATEND
+            8268              8268  TOUCHBIN
+            8279              8279  TOUCHGETFILETABLELOOP
+            828B              828B  TOUCHGOTFILETABLE
+            82AD              82AD  TOUCHWRITENAMELOOP
+            82BF              82BF  TOUCHWRITENAMEEND
+            82D8              82D8  EDBIN
+            82DE              82DE  EDSTARTSTR
+            831E              831E  EDSTARTSTRLEN
+            8320              8320  EDHELPSTR
+            8394              8394  EDHELPSTRLEN
+            8396              8396  EDNOTFOUNDSTR
+            83A7              83A7  EDNOTFOUNDSTRLEN
+            83A9              83A9  EDNOTCOMMANDSTR
+            83B9              83B9  EDNOTCOMMANDSTRLEN
+            83BB              83BB  EDCURFILE
+            83BD              83BD  EDBUFFER
+            83FD              83FD  EDCOMMANDS
+            8421              8421  EDSTART
+            8430              8430  EDCHECKLOOP
+            844A              844A  EDMATCH
+            846F              846F  EDLOOP
+            847B              847B  EDCOMMANDLOOP
+            848E              848E  EDNOTCOMMAND
+            849C              849C  EDCOMMANDMATCH
+            84BE              84BE  EDADD
+            84CF              84CF  EDBUFFERWRITELOOP
+            84E1              84E1  EDADDEND
+            84E3              84E3  EDWRITE
+            84F7              84F7  EDWRITELOOP
+            8509              8509  EDWRITEEND
+            8518              8518  EDNEWLINE
+            852D              852D  EDHELP
+            8539              8539  EDNOTFOUND
+            8545              8545  EDEND
+            8547              8547  CURDIR
+            8549              8549  FREESPACE
+            854B              854B  STDIN
+            864B              864B  FILES
+            8672              8672  ROOTTABLE1
+            8688              8688  FREESPACESTART
 

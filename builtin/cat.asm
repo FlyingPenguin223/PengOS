@@ -9,7 +9,9 @@ mov dx,SHELLARGS
 mov bx,[CURDIR]
 mov cx,0
 mov cl,byte[bx]
-add bx,19
+add bx,17
+mov bx,[bx]
+add bx,2
 
 CATLOOP:
 call CMPSTR

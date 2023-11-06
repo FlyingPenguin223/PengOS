@@ -4,7 +4,8 @@ mov bx,[CURDIR]
 mov cx,0
 mov cl,byte[bx]
 inc byte[bx] ;increment file count
-add bx,17 ;points to first byte of first filetable entry
+add bx,17
+mov bx,[bx] ;points to first byte of first filetable entry
 
 TOUCHGETFILETABLELOOP:
 cmp cx,0

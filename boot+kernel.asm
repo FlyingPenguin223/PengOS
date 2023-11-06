@@ -93,7 +93,9 @@ ENV: db word BINFOLDER
 BINFOLDER: db 8
 db 3,'bin'
 times 16-4 db 0
+dw word BINTABLE0
 
+BINTABLE0:
 db 1,0
 db 2,'..'
 times 16-3 db 0
@@ -186,7 +188,9 @@ STDIN: times 256 db 0
 FILES: db 2
 db 4,'root'
 times 16-5 db 0
+dw ROOTABLE0
 
+ROOTABLE0:
 db 1,0
 db 2,'..' ; cd .. from root goes back to root :)
 times 16-3 db 0

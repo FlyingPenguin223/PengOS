@@ -26,7 +26,9 @@ call PRINT
 call NEWLINE
 
 mov bx,[CURDIR]
-add bx,19
+add bx,17
+mov bx,[bx]
+add bx,2
 mov ax,0
 
 LSLOOP:

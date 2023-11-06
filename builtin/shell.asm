@@ -94,7 +94,9 @@ mov dx,SHELLCOMMAND
 mov bx,[ENV]
 mov ax,0
 mov al,byte[bx] ;ax file count
-add bx,19
+add bx,17
+mov bx,[bx]
+add bx,2
 mov cx,0
 
 SHELLCHECKLOOP:

@@ -10,14 +10,11 @@ add bx,17
 mov bx,[bx] ;points to first byte of first filetable entry
 
 TOUCHGETFILETABLELOOP:
-cmp cx,0
-je TOUCHGOTFILETABLE
-
 dec cx
 add bx,20
 
 cmp cx,0
-je TOUCHGOTFILETABLE ;dont jmp 0x0000, ugly duplicate
+je TOUCHGOTFILETABLE ;dont jmp 0x0000
 
 mov bx,[bx]
 jmp TOUCHGETFILETABLELOOP

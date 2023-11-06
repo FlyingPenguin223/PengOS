@@ -90,7 +90,7 @@ ret
 
 ENV: db word BINFOLDER
 
-BINFOLDER: db 8
+BINFOLDER: db 9
 db 3,'bin'
 times 16-4 db 0
 dw word BINTABLE0
@@ -149,6 +149,13 @@ db 0,1
 db 2,'ed'
 times 16-3 db 0
 dw word EDBIN
+dw word BINTABLE8
+
+BINTABLE8:
+db 0,1
+db 5,'mkdir'
+times 16-6 db 0
+dw word MKDIRBIN
 dw 0x0000
 
 SHELLBIN:
@@ -176,8 +183,12 @@ dw EDBIN-$
 %include "./builtin/touch.asm"
 
 EDBIN:
-dw CURDIR-$
+dw MKDIRBIN-$
 %include "./builtin/ed.asm"
+
+MKDIRBIN:
+dw CURDIR-$
+%include "./builtin/mkdir.asm"
 
 CURDIR: dw word FILES ;start at root dir
 

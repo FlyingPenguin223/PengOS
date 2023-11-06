@@ -4,6 +4,8 @@ mov bx,[CURDIR]
 mov cx,0
 mov cl,byte[bx]
 inc byte[bx] ;increment file count
+cmp cx,0
+je TOUCHEMPTYFOLDER
 add bx,17
 mov bx,[bx] ;points to first byte of first filetable entry
 
@@ -19,6 +21,9 @@ je TOUCHGOTFILETABLE ;dont jmp 0x0000, ugly duplicate
 
 mov bx,[bx]
 jmp TOUCHGETFILETABLELOOP
+
+TOUCHEMPTYFOLDER:
+add bx,17
 
 TOUCHGOTFILETABLE:
 

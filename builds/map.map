@@ -11,14 +11,14 @@ Output file:  ./builds/full.bin
 -- Sections (summary) ---------------------------------------------------------
 
 Vstart            Start             Stop              Length    Class     Name
-            7C00              7C00              ADB7  000031B7  progbits  .text
+            7C00              7C00              ADA4  000031A4  progbits  .text
 
 -- Sections (detailed) --------------------------------------------------------
 
 ---- Section .text ------------------------------------------------------------
 
 class:     progbits
-length:                31B7
+length:                31A4
 start:                 7C00
 align:     not defined
 follows:   not defined
@@ -95,59 +95,60 @@ Real              Virtual           Name
             81A3              81A3  CDNOTFOUNDSTR
             81AF              81AF  CDNOTFOUNDSTRLEN
             81B1              81B1  CDSTART
-            81C5              81C5  CDLOOP
-            81DD              81DD  CDMATCH
-            81F1              81F1  CDNOTFOUND
-            81FD              81FD  CDEND
-            81FF              81FF  ECHOBIN
-            8201              8201  ECHO
-            8213              8213  CATBIN
-            8218              8218  CATNOTFOUNDSTR
-            8229              8229  CATNOTFOUNDSTRLEN
-            822B              822B  CATSTART
-            823F              823F  CATLOOP
-            8257              8257  CATMATCH
-            8270              8270  CATNOTFOUND
-            8279              8279  CATEND
-            827E              827E  TOUCHBIN
-            8291              8291  TOUCHGETFILETABLELOOP
-            82A3              82A3  TOUCHGOTFILETABLE
-            82C5              82C5  TOUCHWRITENAMELOOP
-            82D7              82D7  TOUCHWRITENAMEEND
-            82F0              82F0  EDBIN
-            82F6              82F6  EDSTARTSTR
-            8336              8336  EDSTARTSTRLEN
-            8338              8338  EDHELPSTR
-            83AC              83AC  EDHELPSTRLEN
-            83AE              83AE  EDNOTFOUNDSTR
-            83BF              83BF  EDNOTFOUNDSTRLEN
-            83C1              83C1  EDNOTCOMMANDSTR
-            83D1              83D1  EDNOTCOMMANDSTRLEN
-            83D3              83D3  EDCURFILE
-            83D5              83D5  EDBUFFER
-            8415              8415  EDCOMMANDS
-            8439              8439  EDSTART
-            844D              844D  EDCHECKLOOP
-            8467              8467  EDMATCH
-            848C              848C  EDLOOP
-            8498              8498  EDCOMMANDLOOP
-            84AB              84AB  EDNOTCOMMAND
-            84B9              84B9  EDCOMMANDMATCH
-            84DB              84DB  EDADD
-            84EC              84EC  EDBUFFERWRITELOOP
-            84FE              84FE  EDADDEND
-            8500              8500  EDWRITE
-            8514              8514  EDWRITELOOP
-            8526              8526  EDWRITEEND
-            8535              8535  EDNEWLINE
-            854A              854A  EDHELP
-            8556              8556  EDNOTFOUND
-            8562              8562  EDEND
-            8564              8564  CURDIR
-            8566              8566  FREESPACE
-            8568              8568  STDIN
-            8668              8668  FILES
-            867B              867B  ROOTABLE0
-            8691              8691  ROOTTABLE1
-            86A7              86A7  FREESPACESTART
+            81CA              81CA  CDLOOP
+            81E2              81E2  CDMATCH
+            81F6              81F6  CDNOTFOUND
+            8202              8202  CDEND
+            8204              8204  ECHOBIN
+            8206              8206  ECHO
+            8218              8218  CATBIN
+            821D              821D  CATNOTFOUNDSTR
+            822E              822E  CATNOTFOUNDSTRLEN
+            8230              8230  CATSTART
+            8249              8249  CATLOOP
+            8261              8261  CATMATCH
+            827A              827A  CATNOTFOUND
+            8283              8283  CATEND
+            8288              8288  TOUCHBIN
+            82A0              82A0  TOUCHGETFILETABLELOOP
+            82B2              82B2  TOUCHEMPTYFOLDER
+            82B5              82B5  TOUCHGOTFILETABLE
+            82D7              82D7  TOUCHWRITENAMELOOP
+            82E9              82E9  TOUCHWRITENAMEEND
+            8302              8302  EDBIN
+            8308              8308  EDSTARTSTR
+            8348              8348  EDSTARTSTRLEN
+            834A              834A  EDHELPSTR
+            83BE              83BE  EDHELPSTRLEN
+            83C0              83C0  EDNOTFOUNDSTR
+            83D1              83D1  EDNOTFOUNDSTRLEN
+            83D3              83D3  EDNOTCOMMANDSTR
+            83E3              83E3  EDNOTCOMMANDSTRLEN
+            83E5              83E5  EDCURFILE
+            83E7              83E7  EDBUFFER
+            8427              8427  EDCOMMANDS
+            844B              844B  EDSTART
+            8466              8466  EDCHECKLOOP
+            8480              8480  EDMATCH
+            84A5              84A5  EDLOOP
+            84B1              84B1  EDCOMMANDLOOP
+            84C4              84C4  EDNOTCOMMAND
+            84D2              84D2  EDCOMMANDMATCH
+            84F4              84F4  EDADD
+            8505              8505  EDBUFFERWRITELOOP
+            8517              8517  EDADDEND
+            8519              8519  EDWRITE
+            852D              852D  EDWRITELOOP
+            853F              853F  EDWRITEEND
+            854E              854E  EDNEWLINE
+            8563              8563  EDHELP
+            856F              856F  EDNOTFOUND
+            857B              857B  EDEND
+            857D              857D  CURDIR
+            857F              857F  FREESPACE
+            8581              8581  STDIN
+            8681              8681  FILES
+            8694              8694  ROOTABLE0
+            8694              8694  ROOTTABLE1
+            8694              8694  FREESPACESTART
 

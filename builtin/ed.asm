@@ -28,6 +28,8 @@ mov dx,SHELLARGS
 mov bx,[CURDIR]
 mov cx,0
 mov cl,byte[bx]
+cmp cx,0
+je EDNOTFOUND
 add bx,17
 mov bx,[bx]
 add bx,2

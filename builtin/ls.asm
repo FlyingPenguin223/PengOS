@@ -32,6 +32,9 @@ add bx,2
 mov ax,0
 
 LSLOOP:
+cmp cx,0
+je LSEND
+
 mov al,byte[bx]
 inc bx
 call PRINT
@@ -41,8 +44,6 @@ add bx,17
 mov bx,[bx]
 add bx,2
 dec cx
-cmp cx,0
-je LSEND
 jmp LSLOOP
 
 LSEND:

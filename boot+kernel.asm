@@ -185,7 +185,7 @@ FREESPACE: dw word FREESPACESTART ;where to write new files to
 
 STDIN: times 256 db 0
 
-FILES: db 0
+FILES: db 2
 db 4,'root'
 times 16-5 db 0
 dw ROOTABLE0

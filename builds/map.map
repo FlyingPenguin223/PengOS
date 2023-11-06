@@ -11,14 +11,14 @@ Output file:  ./builds/full.bin
 -- Sections (summary) ---------------------------------------------------------
 
 Vstart            Start             Stop              Length    Class     Name
-            7C00              7C00              ADA4  000031A4  progbits  .text
+            7C00              7C00              ADD0  000031D0  progbits  .text
 
 -- Sections (detailed) --------------------------------------------------------
 
 ---- Section .text ------------------------------------------------------------
 
 class:     progbits
-length:                31A4
+length:                31D0
 start:                 7C00
 align:     not defined
 follows:   not defined
@@ -149,6 +149,6 @@ Real              Virtual           Name
             8581              8581  STDIN
             8681              8681  FILES
             8694              8694  ROOTABLE0
-            8694              8694  ROOTTABLE1
-            8694              8694  FREESPACESTART
+            86AA              86AA  ROOTTABLE1
+            86C0              86C0  FREESPACESTART
 

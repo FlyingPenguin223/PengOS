@@ -1,9 +1,6 @@
 GETINPUT:
 pusha
 mov bx,STDIN
-mov byte[bx],0 ;reset length of stdin
-
-mov bx,STDIN
 mov byte[bx],0
 inc bx
 

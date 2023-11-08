@@ -59,6 +59,8 @@ call PRINT
 mov ax,0
 int 0x16 ;wait for keypress
 
+xchg ax,ax
+
 mov ax,0
 mov al,0x03 ;clear screen
 int 0x10

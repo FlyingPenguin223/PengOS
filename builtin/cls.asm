@@ -1,0 +1,3 @@
+CLS:
+call CLEARSCREEN
+ret

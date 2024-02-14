@@ -118,40 +118,47 @@ dw word BINTABLE3
 
 BINTABLE3:
 db 0,1
-db 2,'cd'
-times 16-3 db 0
-dw word CDBIN
+db 3,'cls'
+times 16-4 db 0
+dw word CLSBIN
 dw word BINTABLE4
 
 BINTABLE4:
 db 0,1
-db 4,'echo'
-times 16-5 db 0
-dw word ECHOBIN
+db 2,'cd'
+times 16-3 db 0
+dw word CDBIN
 dw word BINTABLE5
 
 BINTABLE5:
 db 0,1
-db 3,'cat'
-times 16-4 db 0
-dw word CATBIN
+db 4,'echo'
+times 16-5 db 0
+dw word ECHOBIN
 dw word BINTABLE6
 
 BINTABLE6:
 db 0,1
-db 5,'touch'
-times 16-6 db 0
-dw word TOUCHBIN
+db 3,'cat'
+times 16-4 db 0
+dw word CATBIN
 dw word BINTABLE7
 
 BINTABLE7:
 db 0,1
-db 2,'ed'
-times 16-3 db 0
-dw word EDBIN
+db 5,'touch'
+times 16-6 db 0
+dw word TOUCHBIN
 dw word BINTABLE8
 
 BINTABLE8:
+db 0,1
+db 2,'ed'
+times 16-3 db 0
+dw word EDBIN
+dw word BINTABLE9
+
+BINTABLE9:
 db 0,1
 db 5,'mkdir'
 times 16-6 db 0
@@ -167,8 +174,12 @@ dw CDBIN-$
 %include "./builtin/ls.asm"
 
 CDBIN:
-dw ECHOBIN-$
+dw CLSBIN-$
 %include "./builtin/cd.asm"
+
+CLSBIN:
+dw ECHOBIN-$
+%include "./builtin/cls.asm"
 
 ECHOBIN:
 dw CATBIN-$

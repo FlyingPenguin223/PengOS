@@ -90,7 +90,7 @@ ret
 
 ENV: db word BINFOLDER
 
-BINFOLDER: db 9
+BINFOLDER: db 10
 db 3,'bin'
 times 16-4 db 0
 dw word BINTABLE0

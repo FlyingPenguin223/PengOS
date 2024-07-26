@@ -90,7 +90,7 @@ ret
 
 ENV: db word BINFOLDER
 
-BINFOLDER: db 10
+BINFOLDER: db 11
 db 3,'bin'
 times 16-4 db 0
 dw word BINTABLE0
@@ -163,6 +163,13 @@ db 0,1
 db 5,'mkdir'
 times 16-6 db 0
 dw word MKDIRBIN
+dw word BINTABLE10
+
+BINTABLE10:
+db 0,1
+db 2,'rm'
+times 16-3 db 0
+dw word RMBIN
 dw 0x0000
 
 SHELLBIN:
@@ -198,8 +205,12 @@ dw MKDIRBIN-$
 %include "./builtin/ed.asm"
 
 MKDIRBIN:
-dw CURDIR-$
+dw RMBIN-$
 %include "./builtin/mkdir.asm"
+
+RMBIN:
+dw CURDIR-$
+%include "./builtin/rm.asm"
 
 CURDIR: dw word FILES ;start at root dir
 
@@ -223,7 +234,7 @@ ROOTTABLE1:
 db 1,0
 db 3,'bin'
 times 16-4 db 0
-dw BINFOLDER
+dw word BINFOLDER
 dw 0x0000
 
 ;FILETABLE LAYOUT:

@@ -90,6 +90,12 @@ ret
 
 ENV: db word BINFOLDER
 
+CURDIR: dw word FILES ;start at root dir
+
+FREESPACE: dw word FREESPACESTART ;where to write new files to
+
+STDIN: times 256 db 0
+
 BINFOLDER: db 11
 db 3,'bin'
 times 16-4 db 0
@@ -209,14 +215,8 @@ dw RMBIN-$
 %include "./builtin/mkdir.asm"
 
 RMBIN:
-dw CURDIR-$
+dw FILES-$
 %include "./builtin/rm.asm"
-
-CURDIR: dw word FILES ;start at root dir
-
-FREESPACE: dw word FREESPACESTART ;where to write new files to
-
-STDIN: times 256 db 0
 
 FILES: db 2
 db 4,'root'

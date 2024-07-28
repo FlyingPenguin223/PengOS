@@ -34,9 +34,9 @@ With QEMU installed, you can launch **PengOS** in a virtualized environment. Fir
 
 This will launch **PengOS** in a QEMU window, which should show up on screen.
 
-### Write PengOS to a Bootable USB (OUTDATED)
+### Write PengOS to a Bootable USB (Danger Zone)
 
-**(NOTICE: PLEASE DO NOT FOLLOW THE INSTRUCTIONS IN THIS SECTION. THEY ARE OUTDATED AND SHOULD BE IGNORED UNTIL THEY ARE UPDATED)**
+**(NOTICE: PLEASE DO NOT FOLLOW THE INSTRUCTIONS IN THIS SECTION UNLESS YOU KNOW WHAT YOU'RE DOING. IT IS VERY POSSIBLE TO BRICK A USB OR PERMENANTLY LOSE DATA IF YOU FOLLOW THESE INSTRUCTIONS BLINDLY. MAKE SURE YOU UNDERSTAND WHAT THESE COMMANDS DO BEFORE RUNNING THEM.)**
 
 If you intend to install **PengOS** as an operating system onto another machine, navigate to your local clone of **PengOS** and run the following commands:
 

@@ -1,14 +1,39 @@
 # PengOS
+
 Small 16 bit operating system kernel project
 
+**PengOS** is a 16 bit operating system and environment for testing and running bare-metal programs. 
+
+Most operating systems (like Windows and Linux) have measures put in place that prevent any "raw" binaries (which are just pure x86 machine code) from running. This means that, normally, the only way to run bare metal programs is for the bootloader to boot into that program directly, which has the issue of requiring you to give up your operating system altogether. **PengOS** seeks to rectify this issue by providing an environment where all programs run directly on bare metal. When you run a program in **PengOS**, the shell simply jumps CPU execution to the contents of the binary that was run. 
+
 ## Usage
-to use with qemu:
-./run
 
-to write to bootable USB, assemble the source with
+Getting **PengOS** up and running takes only a few steps:
 
-nasm boot+kernel.asm -f bin -o ./builds/full.bin
+### Dependencies
 
-dd if=./builds/full.bin of=/dev/[NAME OF USB DEVICE FILE] && sync
+First, make sure you have QEMU and NASM installed by running `whereis qemu` followed by `whereis nasm` in Bash (if you have them installed, a file path should show up. If you don't, you'll likely just see `qemu:` and/or `nasm:` printed to the screen). If you don't have one or both of the programs installed, use the package manager of your choice to install them. We recommend installing the `qemu-full` option to minimize the amount of setup you need to do post-installation. On Arch based distributions, this is done through `sudo pacman -S qemu-full` (please make sure you know what you're doing before running random shell commands that you've found off the internet). NASM can be installed on Arch based distributions through `sudo pacman -S nasm` (again, don't run shell commands if you don't know what you're doing).
 
-then can select to boot from usb drive and it should work
+### Clone PengOS to your local system
+
+Please read [this tutorial](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) from GitHub which explains how to clone a repository to your local system. Follow these steps with the **PengOS** repository in order to have all of the **PengOS** files downloaded onto your computer. 
+
+### Run PengOS with QEMU
+
+With QEMU installed, you can launch **PengOS** in a virtualized environment. First, make sure you have Virtualization enabled on your machine (this is usually done through BIOS). Next, use the command line and navigate to your local clone of **PengOS**, then type the following command:
+
+`./run`
+
+This will launch **PengOS** in a QEMU window, which should show up on screen.
+
+### Write PengOS to a Bootable USB (OUTDATED)
+
+**(NOTICE: PLEASE DO NOT FOLLOW THE INSTRUCTIONS IN THIS SECTION. THEY ARE OUTDATED AND SHOULD BE IGNORED UNTIL THEY ARE UPDATED)**
+
+If you intend to install **PengOS** as an operating system onto another machine, navigate to your local clone of **PengOS** and run the following commands:
+
+`nasm boot+kernel.asm -f bin -o ./builds/full.bin`
+
+`dd if=./builds/full.bin of=/dev/[NAME OF USB DEVICE FILE] && sync`
+
+From there, it is up to you to boot **PengOS** from your USB drive. 

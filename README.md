@@ -12,7 +12,15 @@ Getting **PengOS** up and running takes only a few steps:
 
 ### Dependencies
 
-First, make sure you have QEMU and NASM installed by running `whereis qemu` followed by `whereis nasm` in Bash (if you have them installed, a file path should show up. If you don't, you'll likely just see `qemu:` and/or `nasm:` printed to the screen). If you don't have one or both of the programs installed, use the package manager of your choice to install them. We recommend installing the `qemu-full` option to minimize the amount of setup you need to do post-installation. On Arch based distributions, this is done through `sudo pacman -S qemu-full` (please make sure you know what you're doing before running random shell commands that you've found off the internet). NASM can be installed on Arch based distributions through `sudo pacman -S nasm` (again, don't run shell commands if you don't know what you're doing).
+First, make sure you have QEMU and NASM installed by running `whereis qemu` followed by `whereis nasm` in Bash (if you have them installed, a file path should show up. If you don't, you'll likely just see `qemu:` and/or `nasm:` printed to the screen). If you don't have one or both of the programs installed, use the package manager of your choice to install them. We recommend installing the `qemu-full` option to minimize the amount of setup you need to do post-installation. On Arch based distributions, this is done through 
+
+`sudo pacman -S qemu-full` 
+
+NASM can be installed on Arch based distributions through 
+
+`sudo pacman -S nasm` 
+
+(please make sure you know what you're doing before running random shell commands that you've found off the internet)
 
 ### Clone PengOS to your local system
 

@@ -1,3 +1,0 @@
-#!/bin/sh
-nasm boot+kernel.asm -f bin -o ./builds/full.bin
-sudo dd if=./builds/full.bin of=/dev/sdb

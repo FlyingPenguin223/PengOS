@@ -28,7 +28,7 @@ Please read [this tutorial](https://docs.github.com/en/repositories/creating-and
 
 ### Run PengOS with QEMU
 
-With QEMU installed, you can launch **PengOS** in a virtualized environment. First, make sure you have Virtualization enabled on your machine (this is usually done through BIOS). Next, use the command line and navigate to your local clone of **PengOS**, then type the following command:
+With QEMU installed, you can launch **PengOS** in a virtualized environment. First, make sure you have virtualization enabled on your machine (this is usually done through BIOS). Next, use the command line and navigate to your local clone of **PengOS**, then type the following command:
 
 `./run`
 

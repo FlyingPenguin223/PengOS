@@ -28,15 +28,15 @@ Please read [this tutorial](https://docs.github.com/en/repositories/creating-and
 
 ### Run PengOS with QEMU
 
-With QEMU installed, you can launch **PengOS** in a virtualized environment. First, make sure you have Virtualization enabled on your machine (this is usually done through BIOS). Next, use the command line and navigate to your local clone of **PengOS**, then type the following command:
+With QEMU installed, you can launch **PengOS** in a virtualized environment. First, make sure you have virtualization enabled on your machine (this is usually done through BIOS). Next, use the command line and navigate to your local clone of **PengOS**, then type the following command:
 
 `./run`
 
 This will launch **PengOS** in a QEMU window, which should show up on screen.
 
-### Write PengOS to a Bootable USB (OUTDATED)
+### Write PengOS to a Bootable USB (Danger Zone)
 
-**(NOTICE: PLEASE DO NOT FOLLOW THE INSTRUCTIONS IN THIS SECTION. THEY ARE OUTDATED AND SHOULD BE IGNORED UNTIL THEY ARE UPDATED)**
+**(NOTICE: PLEASE DO NOT FOLLOW THE INSTRUCTIONS IN THIS SECTION UNLESS YOU KNOW WHAT YOU'RE DOING. IT IS VERY POSSIBLE TO BRICK A USB OR PERMENANTLY LOSE DATA IF YOU FOLLOW THESE INSTRUCTIONS BLINDLY. MAKE SURE YOU UNDERSTAND WHAT THESE COMMANDS DO BEFORE RUNNING THEM.)**
 
 If you intend to install **PengOS** as an operating system onto another machine, navigate to your local clone of **PengOS** and run the following commands:
 

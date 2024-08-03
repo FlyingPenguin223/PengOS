@@ -96,7 +96,7 @@ FREESPACE: dw word FREESPACESTART ;where to write new files to
 
 STDIN: times 256 db 0
 
-BINFOLDER: db 11
+BINFOLDER: db 12
 db 3,'bin'
 times 16-4 db 0
 dw word BINTABLE0
@@ -176,47 +176,58 @@ db 0,1
 db 2,'rm'
 times 16-3 db 0
 dw word RMBIN
+dw word BINTABLE11
+
+BINTABLE11:
+db 0,1
+db 4,'edit'
+times 16-5 db 0
+dw word EDITBIN
 dw 0x0000
 
 SHELLBIN:
-dw LSBIN-$ ;length
+dw LSBIN-$-2 ;length (-2 is for the length of the word)
 %include "./builtin/shell.asm"
 
 LSBIN:
-dw CDBIN-$
+dw CDBIN-$-2
 %include "./builtin/ls.asm"
 
 CDBIN:
-dw CLSBIN-$
+dw CLSBIN-$-2
 %include "./builtin/cd.asm"
 
 CLSBIN:
-dw ECHOBIN-$
+dw ECHOBIN-$-2
 %include "./builtin/cls.asm"
 
 ECHOBIN:
-dw CATBIN-$
+dw CATBIN-$-2
 %include "./builtin/echo.asm"
 
 CATBIN:
-dw TOUCHBIN-$
+dw TOUCHBIN-$-2
 %include "./builtin/cat.asm"
 
 TOUCHBIN:
-dw EDBIN-$
+dw EDBIN-$-2
 %include "./builtin/touch.asm"
 
 EDBIN:
-dw MKDIRBIN-$
+dw MKDIRBIN-$-2
 %include "./builtin/ed.asm"
 
 MKDIRBIN:
-dw RMBIN-$
+dw RMBIN-$-2
 %include "./builtin/mkdir.asm"
 
 RMBIN:
-dw FILES-$
+dw EDITBIN-$-2
 %include "./builtin/rm.asm"
+
+EDITBIN:
+dw FILES-$-2
+%include "./builtin/edit.asm"
 
 FILES: db 2
 db 4,'root'

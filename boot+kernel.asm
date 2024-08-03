@@ -34,9 +34,7 @@ dw 0xaa55
 
 KERNEL_START:
 
-pusha
 call CLEARSCREEN ;clear screen for epic intro
-popa
 
 mov ah,01 ; clear cursor
 mov cx,0x2000
@@ -83,9 +81,11 @@ WELCOMESTR2LEN: dw ($-WELCOMESTR2)  ;28
 %include "./include/cmpstr.asm" ;bx is str1, dx is str2, ax return 1 true 0 false
 
 CLEARSCREEN:
+pusha
 mov ax,0
 mov al,0x03
 int 0x10
+popa
 ret
 
 ENV: db word BINFOLDER

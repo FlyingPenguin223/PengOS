@@ -225,6 +225,7 @@ Real              Virtual           Name
             8B48              8B48  EDITSETXYNEWLINE
             8B4E              8B4E  EDITSETXYEND
             8B59              8B59  EDITEND
+            8B5C              8B5C  EDITNOTFOUNDEND
             8B5D              8B5D  FILES
             8B70              8B70  ROOTABLE0
             8B86              8B86  ROOTTABLE1

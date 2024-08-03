@@ -42,7 +42,7 @@ mov bx,EDITNOTFOUNDSTR
 mov ax,[EDITNOTFOUNDSTRLEN]
 call PRINT
 call NEWLINE
-jmp EDITEND
+jmp EDITNOTFOUNDEND
 
 EDITHUDSTR: db 'editing file: "'
 EDITHUDSTRLEN: dw $-EDITHUDSTR
@@ -396,4 +396,5 @@ jmp EDITLOOP ;bx already popped? <- no longer relevant
 
 EDITEND:
 call CLEARSCREEN
+EDITNOTFOUNDEND:
 ret

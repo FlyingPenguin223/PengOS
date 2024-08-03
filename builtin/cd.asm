@@ -1,4 +1,3 @@
-pusha
 jmp CDSTART
 
 CDNOTFOUNDSTR: db 'Not found :('
@@ -48,5 +47,4 @@ call PRINT
 call NEWLINE
 
 CDEND:
-popa
 ret

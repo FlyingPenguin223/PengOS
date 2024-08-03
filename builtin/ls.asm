@@ -1,4 +1,3 @@
-pusha
 jmp LSSTART
 
 LSSTR: db 'in ['
@@ -47,5 +46,4 @@ dec cx
 jmp LSLOOP
 
 LSEND:
-popa
 ret

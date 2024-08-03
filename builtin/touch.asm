@@ -1,4 +1,4 @@
-pusha ;allocate 512 bytes for a file, first word is length
+;allocate 512 bytes for a file, first word is length
 
 mov bx,[CURDIR]
 mov cx,0
@@ -71,5 +71,4 @@ mov word[bx],0x0000 ;file length, done with new file
 ; incrementing file count. assign name and properties (not a folder, not executable)
 ; add 512 to freespace, and go to the location of the file and set the first word to zero for length
 
-popa
 ret

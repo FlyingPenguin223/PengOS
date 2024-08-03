@@ -1,4 +1,3 @@
-pusha
 jmp EDSTART
 
 EDSTARTSTR: db 'Welcome to this text editor! type "help" for a list of commands.'
@@ -181,5 +180,4 @@ call PRINT
 call NEWLINE
 
 EDEND:
-popa
 ret

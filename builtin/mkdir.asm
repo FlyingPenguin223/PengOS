@@ -1,4 +1,3 @@
-pusha
 
 mov bx,[CURDIR]
 mov cx,0
@@ -115,5 +114,4 @@ mov word[bx],ax ;prev directory ptr
 add bx,2
 mov word[bx],0x0000 ;ptr to next entry in filetable, done
 
-popa
 ret

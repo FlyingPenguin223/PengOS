@@ -1,4 +1,3 @@
-pusha
 jmp CATSTART
 
 CATNOTFOUNDSTR: db 'File not found :('
@@ -52,5 +51,4 @@ call PRINT
 
 CATEND:
 call NEWLINE
-popa
 ret

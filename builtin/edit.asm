@@ -85,7 +85,7 @@ jmp EDITWRITEFILENAMELOOP
 
 EDITCURSX: db 0
 EDITCURSY: db 0
-EDITCURSPOS: db 0
+EDITCURSPOS: dw 0
 EDITFILELEN: dw 0
 EDITFILEPTR: dw 0
 
@@ -146,17 +146,16 @@ je EDITBACKSPACE
 
 push ax
 
-mov ax,0
 mov bx,EDITFILELEN
 inc word[bx]
-mov al,byte[bx] ; ax file length
+mov ax,word[bx] ; ax file length
 mov bx,[EDITFILEPTR]
 inc word[bx] ; file length word
 add bx,ax ; bx points to last char in file (should add two??? but its broken)
 
-mov cx,0
-mov cl,byte[EDITCURSPOS]
+mov cx,word[EDITCURSPOS]
 EDITTYPELOOP:
+
 mov dl,byte[bx]
 mov byte[bx+1],dl
 dec bx
@@ -167,8 +166,7 @@ je EDITTYPEEND
 jmp EDITTYPELOOP
 
 EDITTYPEEND:
-mov ax,0
-mov al,byte[EDITCURSPOS]
+mov ax,word[EDITCURSPOS]
 mov bx,[EDITFILEPTR]
 add bx,2
 add bx,ax
@@ -183,8 +181,7 @@ mov byte[bx],10
 jmp EDITRIGHT
 
 EDITBACKSPACE:
-mov ax,0
-mov al,byte[EDITCURSPOS]
+mov ax,word[EDITCURSPOS]
 cmp ax,0
 je EDITLOOP ; dont do anything if at start of file
 mov bx,EDITFILELEN
@@ -223,7 +220,7 @@ mov cx,0
 mov ax,0
 EDITUPLOOP:
 mov bx,EDITCURSPOS
-cmp byte[bx],0
+cmp word[bx],0
 je EDITSETXY
 dec byte[bx]
 
@@ -237,7 +234,7 @@ jmp EDITUPLOOP
 
 EDITUPLOOP2: ; for second newline
 mov bx,EDITCURSPOS
-cmp byte[bx],0
+cmp word[bx],0
 je EDITUPFORWARDFROMSTART
 dec byte[bx]
 
@@ -251,7 +248,7 @@ jmp EDITUPLOOP2
 
 EDITUPFORWARDFROMSTART:
 mov bx,EDITCURSPOS
-dec byte[bx]
+dec word[bx]
 
 EDITUPFORWARD:
 mov bx,EDITCURSX
@@ -260,7 +257,7 @@ add cx,ax
 inc cx ; cx counter
 
 mov bx,EDITCURSPOS
-mov al,byte[bx]
+mov ax,word[bx]
 mov bx,[EDITFILEPTR]
 add bx,2
 add bx,ax
@@ -271,7 +268,7 @@ inc bx
 
 push bx
 mov bx,EDITCURSPOS
-inc byte[bx]
+inc word[bx]
 pop bx
 
 cmp byte[bx],10
@@ -290,16 +287,16 @@ mov dx,[EDITFILELEN]
 mov bx,EDITCURSPOS
 mov ax,0
 EDITDOWNLOOP:
-cmp dl,byte[bx]
+cmp dx,word[bx]
 je EDITSETXY ; straight to setxy if eof
-mov al,byte[bx] ; al curspos
+mov ax,word[bx] ; ax curspos
 mov bx,[EDITFILEPTR]
 add bx,2
 add bx,ax
 cmp byte[bx],10
 je EDITDOWNFORWARD
 mov bx,EDITCURSPOS
-inc byte[bx]
+inc word[bx]
 jmp EDITDOWNLOOP
 
 EDITDOWNFORWARD:
@@ -316,7 +313,7 @@ inc bx
 
 push bx
 mov bx,EDITCURSPOS
-inc byte[bx]
+inc word[bx]
 pop bx
 
 cmp byte[bx],10
@@ -324,9 +321,9 @@ je EDITSETXY
 
 push bx
 mov bx,EDITCURSPOS
-mov al,byte[bx]
+mov ax,word[bx]
 pop bx
-cmp dl,al ; dl unchanged
+cmp dx,ax ; dl unchanged
 je EDITSETXY
 
 dec cx
@@ -338,10 +335,10 @@ EDITLEFT:
 ; decrement pos (unless 0)
 ; then set x,y from pos
 mov bx,EDITCURSPOS
-mov al,byte[bx]
-cmp al,0
+mov ax,word[bx]
+cmp ax,0
 je EDITLEFTEOF
-dec byte [bx]
+dec word[bx]
 EDITLEFTEOF:
 jmp EDITSETXY
 
@@ -349,12 +346,11 @@ EDITRIGHT:
 ; increment pos (unless eof)
 ; then set x,y from pos
 mov bx,EDITCURSPOS
-mov ax,0
-mov al,byte[bx]
+mov ax,word[bx]
 mov dx,[EDITFILELEN]
 cmp ax,dx
 je EDITRIGHTEOF
-inc byte [bx]
+inc word[bx]
 EDITRIGHTEOF:
 jmp EDITSETXY
 
@@ -363,13 +359,13 @@ EDITSETXY:
 ; increment x every time
 ; if newline, increment y, set x to zero
 mov dx,0 ;dl x dh y
-mov cx,0
-mov cl,byte [EDITCURSPOS]
+mov cx,word [EDITCURSPOS]
 mov bx,EDITCURSX
 mov word[bx],0 ; both x and y
 mov bx,[EDITFILEPTR]
 add bx,1 ;after first increment
 EDITSETXYLOOP:
+
 inc bx
 cmp cx,0
 je EDITSETXYEND

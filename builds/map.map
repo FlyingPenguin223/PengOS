@@ -11,14 +11,14 @@ Output file:  ./builds/full.bin
 -- Sections (summary) ---------------------------------------------------------
 
 Vstart            Start             Stop              Length    Class     Name
-            7C00              7C00              B2AC  000036AC  progbits  .text
+            7C00              7C00              B29C  0000369C  progbits  .text
 
 -- Sections (detailed) --------------------------------------------------------
 
 ---- Section .text ------------------------------------------------------------
 
 class:     progbits
-length:                36AC
+length:                369C
 start:                 7C00
 align:     not defined
 follows:   not defined
@@ -196,38 +196,38 @@ Real              Virtual           Name
             8948              8948  EDITCURSX
             8949              8949  EDITCURSY
             894A              894A  EDITCURSPOS
-            894B              894B  EDITFILELEN
-            894D              894D  EDITFILEPTR
-            894F              894F  EDITLOOPSTART
-            8973              8973  EDITLOOP
-            89CA              89CA  EDITTYPELOOP
-            89D7              89D7  EDITTYPEEND
-            89F1              89F1  EDITTYPEENTER
-            89F7              89F7  EDITBACKSPACE
-            8A14              8A14  EDITBACKSPACELOOP
-            8A27              8A27  EDITFN
-            8A3F              8A3F  EDITUP
-            8A45              8A45  EDITUPLOOP
-            8A63              8A63  EDITUPLOOP2
-            8A7F              8A7F  EDITUPFORWARDFROMSTART
-            8A84              8A84  EDITUPFORWARD
-            8A9A              8A9A  EDITUPFORWARDLOOP
-            8AAF              8AAF  EDITDOWN
-            8AB9              8AB9  EDITDOWNLOOP
-            8AD4              8AD4  EDITDOWNFORWARD
-            8ADF              8ADF  EDITDOWNFORWARDLOOP
-            8AFF              8AFF  EDITLEFT
-            8B0A              8B0A  EDITLEFTEOF
-            8B0C              8B0C  EDITRIGHT
-            8B1E              8B1E  EDITRIGHTEOF
-            8B20              8B20  EDITSETXY
-            8B38              8B38  EDITSETXYLOOP
-            8B48              8B48  EDITSETXYNEWLINE
-            8B4E              8B4E  EDITSETXYEND
-            8B59              8B59  EDITEND
-            8B5C              8B5C  EDITNOTFOUNDEND
-            8B5D              8B5D  FILES
-            8B70              8B70  ROOTABLE0
-            8B86              8B86  ROOTTABLE1
-            8B9C              8B9C  FREESPACESTART
+            894C              894C  EDITFILELEN
+            894E              894E  EDITFILEPTR
+            8950              8950  EDITLOOPSTART
+            8974              8974  EDITLOOP
+            89C5              89C5  EDITTYPELOOP
+            89D2              89D2  EDITTYPEEND
+            89E9              89E9  EDITTYPEENTER
+            89EF              89EF  EDITBACKSPACE
+            8A09              8A09  EDITBACKSPACELOOP
+            8A1C              8A1C  EDITFN
+            8A34              8A34  EDITUP
+            8A3A              8A3A  EDITUPLOOP
+            8A58              8A58  EDITUPLOOP2
+            8A74              8A74  EDITUPFORWARDFROMSTART
+            8A79              8A79  EDITUPFORWARD
+            8A8F              8A8F  EDITUPFORWARDLOOP
+            8AA4              8AA4  EDITDOWN
+            8AAE              8AAE  EDITDOWNLOOP
+            8AC9              8AC9  EDITDOWNFORWARD
+            8AD4              8AD4  EDITDOWNFORWARDLOOP
+            8AF4              8AF4  EDITLEFT
+            8B00              8B00  EDITLEFTEOF
+            8B02              8B02  EDITRIGHT
+            8B11              8B11  EDITRIGHTEOF
+            8B13              8B13  EDITSETXY
+            8B28              8B28  EDITSETXYLOOP
+            8B38              8B38  EDITSETXYNEWLINE
+            8B3E              8B3E  EDITSETXYEND
+            8B49              8B49  EDITEND
+            8B4C              8B4C  EDITNOTFOUNDEND
+            8B4D              8B4D  FILES
+            8B60              8B60  ROOTABLE0
+            8B76              8B76  ROOTTABLE1
+            8B8C              8B8C  FREESPACESTART
 

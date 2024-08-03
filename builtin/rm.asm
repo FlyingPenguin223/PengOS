@@ -1,4 +1,3 @@
-pusha
 jmp RMSTART
 
 RMFOLDERSTR: db 'empty folder first'
@@ -99,5 +98,4 @@ mov bx,[CURDIR]
 dec byte [bx]
 
 RMEND:
-popa
 ret

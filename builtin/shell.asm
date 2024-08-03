@@ -128,7 +128,9 @@ add bx,16
 mov bx,word [bx]
 add bx,2
 
+pusha
 call bx
+popa
 
 jmp SHELLOOP
 

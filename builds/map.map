@@ -11,14 +11,14 @@ Output file:  ./builds/full.bin
 -- Sections (summary) ---------------------------------------------------------
 
 Vstart            Start             Stop              Length    Class     Name
-            7C00              7C00              AFCF  000033CF  progbits  .text
+            7C00              7C00              AFC1  000033C1  progbits  .text
 
 -- Sections (detailed) --------------------------------------------------------
 
 ---- Section .text ------------------------------------------------------------
 
 class:     progbits
-length:                33CF
+length:                33C1
 start:                 7C00
 align:     not defined
 follows:   not defined
@@ -38,26 +38,26 @@ Real              Virtual           Name
             7C37              7C37  disk_loop
             7C39              7C39  load_kernel
             7E00              7E00  KERNEL_START
-            7E3B              7E3B  WELCOMESTR
-            7E4D              7E4D  WELCOMESTRLEN
-            7E4F              7E4F  WELCOMESTR2
-            7E6B              7E6B  WELCOMESTR2LEN
-            7E6D              7E6D  PRINT
-            7E75              7E75  PRINTLOOP
-            7E85              7E85  PRINTNEWLINE
-            7E8C              7E8C  PRINTEND
-            7E8E              7E8E  MOVECURS
-            7E9A              7E9A  GETINPUT
-            7EA2              7EA2  GETINPUTLOOP
-            7EC7              7EC7  GETINPUTBACKSPACE
-            7EE8              7EE8  GETINPUTEND
-            7EED              7EED  NEWLINE
-            7F0F              7F0F  NEWLINESETCURS
-            7F17              7F17  CMPSTR
-            7F1B              7F1B  CMPLOOP
-            7F32              7F32  CMPRELOOP
-            7F40              7F40  CMPEQUAL
-            7F45              7F45  CLEARSCREEN
+            7E3D              7E3D  WELCOMESTR
+            7E4F              7E4F  WELCOMESTRLEN
+            7E51              7E51  WELCOMESTR2
+            7E6D              7E6D  WELCOMESTR2LEN
+            7E6F              7E6F  PRINT
+            7E77              7E77  PRINTLOOP
+            7E87              7E87  PRINTNEWLINE
+            7E8E              7E8E  PRINTEND
+            7E90              7E90  MOVECURS
+            7E9C              7E9C  GETINPUT
+            7EA4              7EA4  GETINPUTLOOP
+            7EC9              7EC9  GETINPUTBACKSPACE
+            7EEA              7EEA  GETINPUTEND
+            7EEF              7EEF  NEWLINE
+            7F11              7F11  NEWLINESETCURS
+            7F19              7F19  CMPSTR
+            7F1D              7F1D  CMPLOOP
+            7F34              7F34  CMPRELOOP
+            7F42              7F42  CMPEQUAL
+            7F47              7F47  CLEARSCREEN
             7F4F              7F4F  ENV
             7F51              7F51  CURDIR
             7F53              7F53  FREESPACE
@@ -90,97 +90,97 @@ Real              Virtual           Name
             824B              824B  SHELLRUNCOMMAND
             8267              8267  SHELLCHECKLOOP
             8280              8280  SHELLMATCH
-            8297              8297  SHELLNOTFOUND
-            82A6              82A6  LSBIN
-            82AB              82AB  LSSTR
-            82AF              82AF  LSSTRLEN
-            82B1              82B1  LSSTR2
-            82BA              82BA  LSSTR2LEN
-            82BC              82BC  LSSTART
-            82F3              82F3  LSLOOP
-            830C              830C  LSEND
+            8299              8299  SHELLNOTFOUND
+            82A8              82A8  LSBIN
+            82AC              82AC  LSSTR
+            82B0              82B0  LSSTRLEN
+            82B2              82B2  LSSTR2
+            82BB              82BB  LSSTR2LEN
+            82BD              82BD  LSSTART
+            82F4              82F4  LSLOOP
+            830D              830D  LSEND
             830E              830E  CDBIN
-            8313              8313  CDNOTFOUNDSTR
-            831F              831F  CDNOTFOUNDSTRLEN
-            8321              8321  CDSTART
-            833A              833A  CDLOOP
-            8352              8352  CDMATCH
-            8366              8366  CDNOTFOUND
-            8372              8372  CDEND
-            8374              8374  CLSBIN
-            8376              8376  CLS
-            837A              837A  ECHOBIN
-            837C              837C  ECHO
-            838E              838E  CATBIN
-            8393              8393  CATNOTFOUNDSTR
-            83A4              83A4  CATNOTFOUNDSTRLEN
-            83A6              83A6  CATSTART
-            83BF              83BF  CATLOOP
-            83D7              83D7  CATMATCH
-            83F0              83F0  CATNOTFOUND
-            83F9              83F9  CATEND
-            83FE              83FE  TOUCHBIN
-            8416              8416  TOUCHGETFILETABLELOOP
-            8423              8423  TOUCHEMPTYFOLDER
-            8426              8426  TOUCHGOTFILETABLE
-            8448              8448  TOUCHWRITENAMELOOP
-            845A              845A  TOUCHWRITENAMEEND
-            8473              8473  EDBIN
-            8479              8479  EDSTARTSTR
-            84B9              84B9  EDSTARTSTRLEN
-            84BB              84BB  EDHELPSTR
-            852F              852F  EDHELPSTRLEN
-            8531              8531  EDNOTFOUNDSTR
-            8542              8542  EDNOTFOUNDSTRLEN
-            8544              8544  EDNOTCOMMANDSTR
-            8554              8554  EDNOTCOMMANDSTRLEN
-            8556              8556  EDCURFILE
-            8558              8558  EDBUFFER
-            8598              8598  EDCOMMANDS
-            85BC              85BC  EDSTART
-            85D7              85D7  EDCHECKLOOP
-            85F1              85F1  EDMATCH
-            8616              8616  EDLOOP
-            8622              8622  EDCOMMANDLOOP
-            8635              8635  EDNOTCOMMAND
-            8643              8643  EDCOMMANDMATCH
-            8665              8665  EDADD
-            8676              8676  EDBUFFERWRITELOOP
-            8688              8688  EDADDEND
-            868A              868A  EDWRITE
-            869E              869E  EDWRITELOOP
-            86B0              86B0  EDWRITEEND
-            86BF              86BF  EDNEWLINE
-            86D4              86D4  EDHELP
-            86E0              86E0  EDNOTFOUND
-            86EC              86EC  EDEND
-            86EE              86EE  MKDIRBIN
-            8706              8706  MKDIRGETFILETABLELOOP
-            8713              8713  MKDIREMPTYFOLDER
-            8716              8716  MKDIRGOTFILETABLE
-            8738              8738  MKDIRNAMELOOP
-            874A              874A  MKDIRNAMEWRITTEN
-            8769              8769  MKDIRWRITENAME2
-            877B              877B  MKDIRNAME2WRITTEN
-            879D              879D  MKDIRSMALLLOOP
-            87A9              87A9  MKDIRENDSMALLLOOP
-            87B7              87B7  RMBIN
-            87BC              87BC  RMFOLDERSTR
-            87CE              87CE  RMFOLDERSTRLEN
-            87D0              87D0  RMNOTFOUNDSTR
-            87E1              87E1  RMNOTFOUNDSTRLEN
-            87E3              87E3  RMSTART
-            87FC              87FC  RMCHECKLOOP
-            8814              8814  RMMATCH
-            8820              8820  RMFOLDER
-            883B              883B  RMNOTFOUND
-            8849              8849  RMREMOVE
-            8866              8866  RMFILELOOP
-            8873              8873  RMWRITEMID
-            8878              8878  RMDECREMENT
-            887E              887E  RMEND
-            8880              8880  FILES
-            8893              8893  ROOTABLE0
-            88A9              88A9  ROOTTABLE1
-            88BF              88BF  FREESPACESTART
+            8312              8312  CDNOTFOUNDSTR
+            831E              831E  CDNOTFOUNDSTRLEN
+            8320              8320  CDSTART
+            8339              8339  CDLOOP
+            8351              8351  CDMATCH
+            8365              8365  CDNOTFOUND
+            8371              8371  CDEND
+            8372              8372  CLSBIN
+            8374              8374  CLS
+            8378              8378  ECHOBIN
+            837A              837A  ECHO
+            838A              838A  CATBIN
+            838E              838E  CATNOTFOUNDSTR
+            839F              839F  CATNOTFOUNDSTRLEN
+            83A1              83A1  CATSTART
+            83BA              83BA  CATLOOP
+            83D2              83D2  CATMATCH
+            83EB              83EB  CATNOTFOUND
+            83F4              83F4  CATEND
+            83F8              83F8  TOUCHBIN
+            840F              840F  TOUCHGETFILETABLELOOP
+            841C              841C  TOUCHEMPTYFOLDER
+            841F              841F  TOUCHGOTFILETABLE
+            8441              8441  TOUCHWRITENAMELOOP
+            8453              8453  TOUCHWRITENAMEEND
+            846B              846B  EDBIN
+            8470              8470  EDSTARTSTR
+            84B0              84B0  EDSTARTSTRLEN
+            84B2              84B2  EDHELPSTR
+            8526              8526  EDHELPSTRLEN
+            8528              8528  EDNOTFOUNDSTR
+            8539              8539  EDNOTFOUNDSTRLEN
+            853B              853B  EDNOTCOMMANDSTR
+            854B              854B  EDNOTCOMMANDSTRLEN
+            854D              854D  EDCURFILE
+            854F              854F  EDBUFFER
+            858F              858F  EDCOMMANDS
+            85B3              85B3  EDSTART
+            85CE              85CE  EDCHECKLOOP
+            85E8              85E8  EDMATCH
+            860D              860D  EDLOOP
+            8619              8619  EDCOMMANDLOOP
+            862C              862C  EDNOTCOMMAND
+            863A              863A  EDCOMMANDMATCH
+            865C              865C  EDADD
+            866D              866D  EDBUFFERWRITELOOP
+            867F              867F  EDADDEND
+            8681              8681  EDWRITE
+            8695              8695  EDWRITELOOP
+            86A7              86A7  EDWRITEEND
+            86B6              86B6  EDNEWLINE
+            86CB              86CB  EDHELP
+            86D7              86D7  EDNOTFOUND
+            86E3              86E3  EDEND
+            86E4              86E4  MKDIRBIN
+            86FB              86FB  MKDIRGETFILETABLELOOP
+            8708              8708  MKDIREMPTYFOLDER
+            870B              870B  MKDIRGOTFILETABLE
+            872D              872D  MKDIRNAMELOOP
+            873F              873F  MKDIRNAMEWRITTEN
+            875E              875E  MKDIRWRITENAME2
+            8770              8770  MKDIRNAME2WRITTEN
+            8792              8792  MKDIRSMALLLOOP
+            879E              879E  MKDIRENDSMALLLOOP
+            87AB              87AB  RMBIN
+            87AF              87AF  RMFOLDERSTR
+            87C1              87C1  RMFOLDERSTRLEN
+            87C3              87C3  RMNOTFOUNDSTR
+            87D4              87D4  RMNOTFOUNDSTRLEN
+            87D6              87D6  RMSTART
+            87EF              87EF  RMCHECKLOOP
+            8807              8807  RMMATCH
+            8813              8813  RMFOLDER
+            882E              882E  RMNOTFOUND
+            883C              883C  RMREMOVE
+            8859              8859  RMFILELOOP
+            8866              8866  RMWRITEMID
+            886B              886B  RMDECREMENT
+            8871              8871  RMEND
+            8872              8872  FILES
+            8885              8885  ROOTABLE0
+            889B              889B  ROOTTABLE1
+            88B1              88B1  FREESPACESTART
 
